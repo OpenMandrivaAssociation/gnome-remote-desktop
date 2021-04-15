@@ -4,15 +4,12 @@
  
 Name:           gnome-remote-desktop
 Version:        40.0
-Release:        2%{?dist}
+Release:        1
 Summary:        GNOME Remote Desktop screen share service
  
 License:        GPLv2+
 URL:            https://gitlab.gnome.org/jadahl/gnome-remote-desktop
 Source0:        https://download.gnome.org/sources/gnome-remote-desktop/40/%{name}-%{tarball_version}.tar.xz
- 
-# Adds encryption support (requires patched LibVNCServer)
-Patch0:         gnutls-anontls.patch
  
 BuildRequires:  git
 BuildRequires:  gcc
@@ -24,7 +21,6 @@ BuildRequires:  pkgconfig(gio-unix-2.0) >= 2.32
 BuildRequires:  pkgconfig(libpipewire-0.3) >= 0.3.0
 BuildRequires:  pkgconfig(libvncserver) >= 0.9.11-7
 BuildRequires:  pkgconfig(freerdp2)
-BuildRequires:  pkgconfig(winpr2)
 BuildRequires:  pkgconfig(fuse3)
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(libsecret-1)
@@ -36,16 +32,12 @@ BuildRequires:  systemd
  
 Requires:       pipewire >= 0.3.0
  
-Obsoletes:      vino < 3.22.0-21
- 
 %description
 GNOME Remote Desktop is a remote desktop and screen sharing service for the
 GNOME desktop environment.
  
- 
 %prep
-%autosetup -S git -n %{name}-%{tarball_version}
- 
+%autosetup -p1
  
 %build
 %meson
@@ -57,14 +49,11 @@ GNOME desktop environment.
 %post
 %systemd_user_post %{systemd_unit}
  
- 
 %preun
 %systemd_user_preun %{systemd_unit}
- 
- 
+
 %postun
 %systemd_user_postun_with_restart %{systemd_unit}
- 
  
 %files
 %license COPYING
