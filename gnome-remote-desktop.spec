@@ -26,8 +26,7 @@ BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libnotify)
 BuildRequires:  pkgconfig(gnutls)
- 
-%{?systemd_requires}
+BuildRequires:  pkgconfig(systemd)
 BuildRequires:  systemd
  
 Requires:       pipewire >= 0.3.0
