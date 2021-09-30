@@ -26,6 +26,7 @@ BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libnotify)
 BuildRequires:  pkgconfig(gnutls)
+BuildRequires:  pkgconfig(ffnvcodec)
 BuildRequires:  pkgconfig(systemd)
 BuildRequires:  systemd
  
