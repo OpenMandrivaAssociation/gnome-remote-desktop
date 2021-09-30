@@ -45,6 +45,8 @@ GNOME desktop environment.
  
 %install
 %meson_install
+
+%find_lang %{name}
  
 %post
 %systemd_user_post %{systemd_unit}
@@ -55,10 +57,12 @@ GNOME desktop environment.
 %postun
 %systemd_user_postun_with_restart %{systemd_unit}
  
-%files
+%files -f %{name}.lang
 %license COPYING
 %doc README
 %{_libexecdir}/gnome-remote-desktop-daemon
 %{_userunitdir}/gnome-remote-desktop.service
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.enums.xml
+%{_datadir}/gnome-remote-desktop/grd-cuda-avc-utils_*.ptx
+
