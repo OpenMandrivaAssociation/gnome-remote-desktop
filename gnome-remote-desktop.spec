@@ -21,6 +21,7 @@ BuildRequires:  pkgconfig(gio-unix-2.0) >= 2.32
 BuildRequires:  pkgconfig(epoxy)
 BuildRequires:  pkgconfig(libdrm)
 BuildRequires:  pkgconfig(gbm)
+BuildRequires:  pkgconfig(gudev-1.0)
 BuildRequires:  pkgconfig(libpipewire-0.3) >= 0.3.0
 BuildRequires:  pkgconfig(libvncserver) >= 0.9.11-7
 BuildRequires:  pkgconfig(freerdp2)
