@@ -4,7 +4,7 @@
  
 Name:           gnome-remote-desktop
 Version:        42.3
-Release:        2
+Release:        3
 Summary:        GNOME Remote Desktop screen share service
  
 License:        GPLv2+
