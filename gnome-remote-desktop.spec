@@ -77,4 +77,5 @@ GNOME desktop environment.
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.enums.xml
 #{_datadir}/gnome-remote-desktop/grd-cuda-avc-utils_*.ptx
 #{_datadir}/gnome-remote-desktop/grd-cuda-damage-utils_30.ptx
+%{_mandir}/man1/grdctl.1.*
 
