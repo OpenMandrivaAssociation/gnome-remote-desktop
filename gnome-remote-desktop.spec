@@ -45,7 +45,7 @@ GNOME desktop environment.
 %autosetup -p1
  
 %build
-%meson
+%meson -Dfdk_aac=false
 %meson_build
  
 %install
