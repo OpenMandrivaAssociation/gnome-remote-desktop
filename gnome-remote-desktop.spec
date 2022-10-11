@@ -48,6 +48,7 @@ GNOME desktop environment.
 %build
 %meson \
        -Drdp=false \
+       -Dvnc=true\
        -Dfdk_aac=false
 %meson_build
  
