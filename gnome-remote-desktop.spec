@@ -45,6 +45,7 @@ GNOME desktop environment.
 %prep
 %autosetup -p1
  
+# disabe fdk-acc because it comes from restricted (lets switch to fdk-acc-free in future). Disable rdp bc it need fdk-acc...
 %build
 %meson \
        -Drdp=false \
@@ -68,12 +69,12 @@ GNOME desktop environment.
  
 %files -f %{name}.lang
 %license COPYING
-%doc README
+%doc README*
 %{_bindir}/grdctl
 %{_libexecdir}/gnome-remote-desktop-daemon
 %{_userunitdir}/gnome-remote-desktop.service
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.enums.xml
-%{_datadir}/gnome-remote-desktop/grd-cuda-avc-utils_*.ptx
-%{_datadir}/gnome-remote-desktop/grd-cuda-damage-utils_30.ptx
+#{_datadir}/gnome-remote-desktop/grd-cuda-avc-utils_*.ptx
+#{_datadir}/gnome-remote-desktop/grd-cuda-damage-utils_30.ptx
 
