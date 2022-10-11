@@ -11,6 +11,7 @@ License:        GPLv2+
 URL:            https://gitlab.gnome.org/jadahl/gnome-remote-desktop
 Source0:        https://download.gnome.org/sources/gnome-remote-desktop/40/%{name}-%{tarball_version}.tar.xz
  
+BuildRequires:  a2x
 BuildRequires:  git
 BuildRequires:  gcc
 BuildRequires:  meson >= 0.36.0
