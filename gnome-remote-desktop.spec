@@ -16,6 +16,7 @@ BuildRequires:  git
 BuildRequires:  gcc
 BuildRequires:  dbus-daemon
 BuildRequires:  meson >= 0.36.0
+BuildRequires:  wireplumber
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(glib-2.0) >= 2.32
