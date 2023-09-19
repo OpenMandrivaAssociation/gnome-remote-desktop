@@ -14,6 +14,7 @@ Source0:        https://download.gnome.org/sources/gnome-remote-desktop/40/%{nam
 BuildRequires:  a2x
 BuildRequires:  git
 BuildRequires:  gcc
+BuildRequires:  dbus
 BuildRequires:  meson >= 0.36.0
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(cairo)
