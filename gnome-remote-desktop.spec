@@ -3,13 +3,13 @@
 %global tarball_version %%(echo %{version} | tr '~' '.')
  
 Name:           gnome-remote-desktop
-Version:        44.2
-Release:        1
+Version:        45
+Release:        0.rc.0
 Summary:        GNOME Remote Desktop screen share service
  
 License:        GPLv2+
 URL:            https://gitlab.gnome.org/jadahl/gnome-remote-desktop
-Source0:        https://download.gnome.org/sources/gnome-remote-desktop/40/%{name}-%{tarball_version}.tar.xz
+Source0:        https://download.gnome.org/sources/gnome-remote-desktop/40/%{name}-%{tarball_version}.rc.tar.xz
  
 BuildRequires:  a2x
 BuildRequires:  git
@@ -43,7 +43,7 @@ GNOME Remote Desktop is a remote desktop and screen sharing service for the
 GNOME desktop environment.
  
 %prep
-%autosetup -p1
+%autosetup -n %{name}-%{version}.rc -p1
  
 # disabe fdk-acc because it comes from restricted (lets switch to fdk-acc-free in future). Disable rdp bc it need fdk-acc...
 %build
