@@ -1,6 +1,6 @@
 %global optflags %{optflags} -Wno-error -Wno-implicit-function-declaration
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
-%global build_ldflags %{build_ldflags} -Wl,--undefined-version
+#%global build_ldflags %{build_ldflags} -Wl,--undefined-version
 
 
 %global systemd_unit gnome-remote-desktop.service
@@ -57,6 +57,8 @@ GNOME desktop environment.
  
 # disabe fdk-acc because it comes from restricted (lets switch to fdk-acc-free in future). Disable rdp bc it need fdk-acc...
 %build
+export CC=gcc
+export CXX=g++
 %meson \
        -Drdp=false \
        -Dvnc=true\
