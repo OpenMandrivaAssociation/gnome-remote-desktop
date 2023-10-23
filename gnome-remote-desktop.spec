@@ -32,6 +32,7 @@ BuildRequires:  pkgconfig(libvncserver) >= 0.9.11-7
 BuildRequires:  pkgconfig(freerdp2)
 BuildRequires:  pkgconfig(fuse3)
 BuildRequires:  pkgconfig(xkbcommon)
+BuildRequires:  pkgconfig(xkbcommon-x11)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libnotify)
 BuildRequires:  pkgconfig(gnutls)
