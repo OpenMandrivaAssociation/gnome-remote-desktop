@@ -1,5 +1,6 @@
 %global optflags %{optflags} -Wno-error -Wno-implicit-function-declaration
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
+%global build_ldflags %{build_ldflags} -Wl,--undefined-version
 
 
 %global systemd_unit gnome-remote-desktop.service
