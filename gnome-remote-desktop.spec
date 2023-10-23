@@ -1,3 +1,7 @@
+%global optflags %{optflags} -Wno-error -Wno-implicit-function-declaration
+%global optflags %{optflags} -Wno-incompatible-function-pointer-types
+
+
 %global systemd_unit gnome-remote-desktop.service
  
 %global tarball_version %%(echo %{version} | tr '~' '.')
