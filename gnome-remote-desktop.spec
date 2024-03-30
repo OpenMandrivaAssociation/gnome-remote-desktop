@@ -61,8 +61,7 @@ export CC=gcc
 export CXX=g++
 %meson \
        -Drdp=false \
-       -Dvnc=true\
-       -Dfdk_aac=false
+       -Dvnc=true
 %meson_build
  
 %install
