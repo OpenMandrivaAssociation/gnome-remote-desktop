@@ -68,7 +68,7 @@ export CXX=g++
 %install
 %meson_install
 
-#find_lang %{name}
+%find_lang %{name}
  
 %post
 %systemd_user_post %{systemd_unit}
@@ -79,8 +79,7 @@ export CXX=g++
 %postun
 %systemd_user_postun_with_restart %{systemd_unit}
  
-%files 
-#-f %{name}.lang
+%files -f %{name}.lang
 %license COPYING
 %doc README*
 %{_bindir}/grdctl
