@@ -20,6 +20,7 @@ BuildRequires:  a2x
 BuildRequires:  git
 BuildRequires:  gcc
 BuildRequires:  dbus-daemon
+BuildRequires: pkgconfig(dbus-1)
 BuildRequires:  meson >= 0.36.0
 BuildRequires:  mutter
 BuildRequires:  wireplumber
