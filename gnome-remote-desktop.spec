@@ -19,6 +19,7 @@ Source0:        https://download.gnome.org/sources/gnome-remote-desktop/40/%{nam
 BuildRequires:  a2x
 BuildRequires:  git
 BuildRequires:  gcc
+BuildRequires: gettext
 BuildRequires:  dbus-daemon
 BuildRequires: pkgconfig(dbus-1)
 BuildRequires:  meson >= 0.36.0
@@ -86,9 +87,10 @@ export CXX=g++
 %{_bindir}/grdctl
 %{_libexecdir}/gnome-remote-desktop-daemon
 %{_userunitdir}/gnome-remote-desktop.service
+%{_userunitdir}/gnome-remote-desktop-headless.service
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.enums.xml
-#{_datadir}/gnome-remote-desktop/grd-cuda-avc-utils_*.ptx
-#{_datadir}/gnome-remote-desktop/grd-cuda-damage-utils_30.ptx
+%{_datadir}/dbus-1/system-services/org.gnome.RemoteDesktop.service
+%{_datadir}polkit-1/actions/org.gnome.remotedesktop.configure-system-daemon.policy
 %{_mandir}/man1/grdctl.1.*
 
