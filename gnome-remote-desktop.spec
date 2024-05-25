@@ -8,7 +8,7 @@ Release:        1
 Summary:        GNOME Remote Desktop screen share service
  
 License:        GPLv2+
-URL:            https://gitlab.gnome.org/jadahl/gnome-remote-desktop
+URL:            https://gitlab.gnome.org/GNOME/gnome-remote-desktop
 Source0:        https://download.gnome.org/sources/gnome-remote-desktop/40/%{name}-%{tarball_version}.tar.xz
  
 BuildRequires:  git
