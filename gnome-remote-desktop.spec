@@ -1,7 +1,7 @@
 %global optflags %{optflags} -Wno-error -Wno-implicit-function-declaration
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
 #%global build_ldflags %{build_ldflags} -Wl,--undefined-version
-%define _disable_lto 1
+#define _disable_lto 1
 
 %global systemd_unit gnome-remote-desktop.service
  
@@ -61,8 +61,8 @@ GNOME desktop environment.
 %autosetup -n %{name}-%{version} -p1
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %meson \
        -Drdp=false \
        -Dvnc=true
