@@ -91,8 +91,8 @@ GNOME desktop environment.
 %{_userunitdir}/gnome-remote-desktop-headless.service
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.desktop.remote-desktop.enums.xml
-%{_datadir}/dbus-1/system-services/org.gnome.RemoteDesktop.service
-%{_datadir}/polkit-1/actions/org.gnome.remotedesktop.configure-system-daemon.policy
-%{_datadir}/polkit-1/actions/org.gnome.remotedesktop.enable-system-daemon.policy
-%{_datadir}/polkit-1/rules.d/20-gnome-remote-desktop.rules
+#{_datadir}/dbus-1/system-services/org.gnome.RemoteDesktop.service
+#{_datadir}/polkit-1/actions/org.gnome.remotedesktop.configure-system-daemon.policy
+#{_datadir}/polkit-1/actions/org.gnome.remotedesktop.enable-system-daemon.policy
+#{_datadir}/polkit-1/rules.d/20-gnome-remote-desktop.rules
 %{_mandir}/man1/grdctl.1.*
