@@ -8,7 +8,7 @@
 %global tarball_version %%(echo %{version} | tr '~' '.')
  
 Name:           gnome-remote-desktop
-Version:        48.rc
+Version:        48.0
 Release:        1
 Summary:        GNOME Remote Desktop screen share service
  
@@ -38,7 +38,8 @@ BuildRequires: pkgconfig(gbm)
 BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(libpipewire-0.3) >= 0.3.0
 BuildRequires: pkgconfig(libvncserver) >= 0.9.11-7
-BuildRequires: pkgconfig(freerdp2)
+# Cant enavle rdp backend because it require fdk-aac (from restricted repo). No go righ now.
+#BuildRequires: pkgconfig(freerdp3)
 BuildRequires: pkgconfig(fuse3)
 BuildRequires: pkgconfig(xkbcommon)
 BuildRequires: pkgconfig(xkbcommon-x11)
