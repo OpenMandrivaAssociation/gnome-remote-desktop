@@ -38,7 +38,8 @@ BuildRequires: pkgconfig(gbm)
 BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(libpipewire-0.3) >= 0.3.0
 BuildRequires: pkgconfig(libvncserver) >= 0.9.11-7
-BuildRequires: pkgconfig(freerdp3)
+# Cant enavle rdp backend because it require fdk-aac (from restricted repo). No go righ now.
+#BuildRequires: pkgconfig(freerdp3)
 BuildRequires: pkgconfig(fuse3)
 BuildRequires: pkgconfig(xkbcommon)
 BuildRequires: pkgconfig(xkbcommon-x11)
@@ -64,7 +65,7 @@ GNOME desktop environment.
 #export CC=gcc
 #export CXX=g++
 %meson \
-       -Drdp=true \
+       -Drdp=false \
        -Dvnc=true
 %meson_build
  
