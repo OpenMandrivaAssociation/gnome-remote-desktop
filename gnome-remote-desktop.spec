@@ -9,7 +9,7 @@
  
 Name:           gnome-remote-desktop
 Version:        50.2
-Release:        2
+Release:        3
 Summary:        GNOME Remote Desktop screen share service
  
 License:        GPLv2+
