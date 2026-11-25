@@ -8,8 +8,8 @@
 %global tarball_version %%(echo %{version} | tr '~' '.')
  
 Name:           gnome-remote-desktop
-Version:        51.0
-Release:        2
+Version:        51.1
+Release:        1
 Summary:        GNOME Remote Desktop screen share service
  
 License:        GPLv2+
